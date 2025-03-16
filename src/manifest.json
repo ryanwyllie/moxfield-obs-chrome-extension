@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Moxfield Battlefield Viewer",
+  "version": "1.0",
+  "description": "Duplicates Moxfield playtest in new window for OBS screenshare",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "declarativeContent"
+  ],
+  "host_permissions": [
+    "https://*.moxfield.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.moxfield.com/decks/*/goldfish"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+} 

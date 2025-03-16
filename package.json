@@ -1,0 +1,28 @@
+{
+  "name": "moxfield-obs-chrome-extension",
+  "version": "1.0.0",
+  "description": "Duplicates Moxfield playtest in new window for OBS screenshare",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "dev": "webpack --mode=development --config webpack.config.js",
+    "dev:watch": "webpack --watch --mode=development --config webpack.config.js",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "author": "Ryan Wyllie",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "copy-webpack-plugin": "^13.0.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-import": "^2.31.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
